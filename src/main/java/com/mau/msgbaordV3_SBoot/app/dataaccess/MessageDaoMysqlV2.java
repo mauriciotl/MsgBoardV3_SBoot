@@ -19,7 +19,7 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.Objects;
 
-@Repository
+@Repository("MessageDaoMysqlV2")
 public class MessageDaoMysqlV2 implements MessageDaoV2 {
 
     // Logger instance for this class

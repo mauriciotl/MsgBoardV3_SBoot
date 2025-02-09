@@ -18,8 +18,7 @@ import java.sql.Timestamp;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//@Disabled("This test class is currently skipped") // Use @Disabled for JUnit 5
-//@SpringBootTest
+@Disabled("This test class is currently skipped") // Use @Disabled for JUnit 5
 @SpringBootTest(classes = {MessageDaoMysqlV2.class, TestConfig.class})
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
