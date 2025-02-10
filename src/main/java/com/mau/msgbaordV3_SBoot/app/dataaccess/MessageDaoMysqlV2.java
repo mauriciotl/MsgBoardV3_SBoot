@@ -88,7 +88,8 @@ public class MessageDaoMysqlV2 implements MessageDaoV2 {
 
     @Override
     public List<Message> findAll() {
-        String sql = "SELECT * FROM message";
+//        String sql = "SELECT * FROM message";
+        String sql = "Select * from message order by creation_date desc";
         try {
             logger.debug("Attempting to retrieve all messages.");
             List<Message> messages = jdbcTemplate.query(sql, new MessageRowMapper());

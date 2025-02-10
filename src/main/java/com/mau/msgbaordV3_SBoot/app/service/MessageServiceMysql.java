@@ -72,6 +72,8 @@ public class MessageServiceMysql implements MessageService {
     public boolean updateMessage(Message message) {
         try {
             logger.info("Updating message with ID: {}", message.getMessageId());
+            logger.info("The HistoryMessage object is created by a Trigger on the DB");
+            //NOTE. The HistoryMessage object is created by a Trigger on the DB
             return messageDao.update(message);
         } catch (DataAccessException e) {
             logger.error("Database error while updating message with ID {}: {}", message.getMessageId(), e.getMessage(), e);
